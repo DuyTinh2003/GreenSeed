@@ -1,0 +1,230 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --primary-color: #38573d;
+  --content-color: #f2ede1;
+  --text-color: #d2c29d;
+  --margin-slider: var(--nav-height);
+  --slider-height: 700px;
+  --content-height: calc(var(--margin-slider) + var(--slider-height));
+  --nav-height: 54px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  user-select: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Philosopher", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+input {
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+}
+#app {
+  overflow: hidden;
+}
+header {
+}
+.nav {
+  position: fixed;
+  background-color: var(--primary-color);
+  font-size: 2.2rem;
+  color: var(--text-color);
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  height: var(--nav-height);
+}
+.nav__logo-web img {
+  width: 65px;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.nav__item:hover {
+  cursor: pointer;
+  background-color: var(--content-color);
+  color: var(--black-color);
+  box-shadow: 0 0 10px var(--content-color);
+}
+.slider {
+  margin-top: var(--margin-slider);
+  background: url(../img/logo.jpg) no-repeat center center / cover;
+  width: 100%;
+  height: var(--slider-height);
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.content {
+  background-color: var(--content-color);
+}
+.content__search--buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.content__search--bar input {
+  width: 500px;
+  padding: 8px 10px;
+}
+
+.content__search--cart {
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.content__search--cart:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.content__wrap--product {
+  padding: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.product__item {
+  background-color: var(--white-color);
+  border-radius: 5px;
+  transition: all 0.2s linear;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.product__item--content {
+  padding: 16px;
+}
+.product__header {
+  color: #5e8063;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+.product__body {
+  display: flex;
+  justify-content: center;
+}
+.product__body-left {
+  margin-right: 16px;
+}
+.product__desc {
+  color: #37563c;
+  word-spacing: 0.4rem;
+  font-size: 1.6rem;
+  overflow: hidden;
+  line-height: 1.7rem;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 12;
+  text-overflow: ellipsis;
+}
+.product__price {
+  color: #37563c;
+  font-size: 2rem;
+  margin: 20px 0 5px 0;
+}
+.product__body-right img {
+  width: 142px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+.btn-primary + .btn-primary {
+  margin-top: 9px;
+}
+.btn-primary {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  min-width: 142px;
+  min-height: 35px;
+}
+.btn-primary:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  color: black;
+}
+
+.footer__service {
+  padding: 30px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  grid-row-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer__service--title {
+  font-size: 2.2rem;
+}
+.footer__service--info {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  margin: 16px 0;
+}
+.footer__promise--form {
+  margin-bottom: 12px;
+}
+.footer__promise--form .form {
+  padding: 8px;
+  min-width: 190px;
+}
+.form__name {
+  margin-bottom: 3px;
+}
+.mail {
+  min-width: 382px !important;
+}
+.footer__promise button {
+  background-color: #5f7863;
+}
+.footer__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 30px;
+  background-color: #28452f;
+  color: #dacdaf;
+  font-size: 2rem;
+}
+.footer__author--name {
+  font-size: 1.8rem;
+}
